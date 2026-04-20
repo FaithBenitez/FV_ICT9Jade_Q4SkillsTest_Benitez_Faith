@@ -6,6 +6,34 @@
     <title>Q4 SkillsTest</title>
 </head>
 <body>
-    
+<script>
+    // start with function
+
+function function_name(){
+
+//declare variables for retrieving input field values and variables for granted and denied messages.
+
+do {
+        
+        if (username === "" && password === "") {
+            alert();
+            attempt_counter = 0; // reset after success
+            document.getElementById("").innerHTML = "";
+            window.location.href = "notebooks.html"; //go to second page
+            break; // stop loop
+        } else {
+            attempt_counter++;
+            document.getElementById("").innerHTML =
+                "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
+        }
+
+    } while (false); 
+
+    if (attempt_counter >= 3) {
+        alert();
+        document.getElementById("").disabled = true; // lock button
+    }
+}
+</script>
 </body>
 </html>
