@@ -18,8 +18,6 @@
         background-size: cover;
     }
 
-  
-
 </style>
 <body>
     <center>
@@ -58,31 +56,32 @@
 </form>
 
 <script>
-    let attempt_counter = 0;
+    let attempt_counter = 0
 
     function checklogin() {
         let inputusername = document.getElementById("username").value;
         let inputpw = document.getElementById("password").value;
         let messageBox = document.getElementById("message");
-    }
 
+      
         if (inputusername === "faithbenitez" && inputpw === "ilovecatz") {
             alert("Your login is successful!");
             attempt_counter = 0; 
             messageBox.innerHTML = "Access granted!";
+      
             window.location.href = "notebooks.html"; 
         } else {
             attempt_counter++;
             messageBox.innerHTML = "Invalid username or password. Attempt " + attempt_counter + " of 3";
-
+            messageBox.style.color = "rgb(233, 223, 194)"
         }
 
         if (attempt_counter >= 3) {
             alert("Too many failed attempts. Access Locked.");
             document.getElementById("logbutton").disabled = true; 
         }
-    
- 
+    }
+
     function session() {
         let staylogin = document.getElementById("login").checked;
         let msgpopup = document.getElementById("message");
@@ -95,13 +94,6 @@
         }
     }
 </script>
-</script>
-        
-
-    </script>
-</script>
-
-<br>
 </body>
 </html>
 
