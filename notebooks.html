@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Notebooks Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+   
+
+        body {
+
+            font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background-image: url(https://i.pinimg.com/736x/a7/2b/ee/a72bee3d09a22e22c5d488f8130e0195.jpg);
+          
+        }
+
+       
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            position: fixed;
+            color: white;
+            padding-top: 20px;
+            background: rgb(35, 35, 36)
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-nav .nav-link {
+            color: #adb5bd;
+            padding: 12px 30px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .sidebar-nav .nav-link:hover, 
+        .sidebar-nav .nav-link.active {
+            color: rgb(233, 223, 194);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+  
+        .main-content {
+            margin-left: 240px;
+            padding: 40px;
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.02) 25%, transparent 25%), 
+                              linear-gradient(225deg, rgba(0,0,0,0.02) 25%, transparent 25%);
+            background-size: 40px 40px;
+        }
+
+        .notebook {
+           background-color: rgb(35, 35, 36);
+            color: white;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: rgb(233, 223, 194);
+            
+        }
+
+        
+        .subject  {
+          
+            border: none;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            height: 100%;
+            transition: transform 0.2s;
+            background-color: rgba(99, 97, 97, 0.916);
+            color: rgb(233, 223, 194);
+
+        }
+
+        .subject:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .subjectthing h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: rgb(233, 223, 194);
+        }
+
+        .subjectthing {
+            background-color: #ffffff60;
+            height: 100px;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;           
+            background: url("https://i.pinimg.com/736x/de/03/2d/de032d3fdef20d0f4a641547d1bb346c.jpg") center/cover;
+        }
+
+   
+
+        .teacher-name {
+            font-size: 0.9rem;
+            color: #323232;
+            margin-bottom: 8px;
+           color: rgb(233, 223, 194);
+        }
+
+   
+
+   
+        .footer-tag {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,0.4);
+            color: white;
+            font-size: 10px;
+            padding: 4px 15px;
+        }
+
+     
+    </style>
+    
+</head>
+<body>
+
+    <div class="sidebar d-none d-md-block">
+        <div class="logo-container">
+            
+        </div>
+        <nav class="sidebar-nav nav flex-column" id="sidebarthings" style="color: rgb(233, 223, 194);">
+            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link active" href="#">Virtual Notebooks</a>
+            <a class="nav-link" href="#">Tasks</a>
+            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link mt-5" href="index.html">Logout</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="mb-5">
+            <div class="notebook">NOTEBOOKS</div>
+        </header>
+
+        <div class="container-fluid p-0">
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="subject subject-img">
+                        <h3>Filipino</h3>
+                        <div class="subjectthing"></div>
+                        <p class="class-info">9-Jade 2025-2026</p>
+                        <div class="mt-auto">
+                            <p class="teacher-name">Ms. Francisco</p>
+                            <div class="progress-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="subject subject-img">
+                        <h3>English</h3>
+                        <div class="subjectthing"></div>
+                        <p class="class-info">9-Jade 2025-2026</p>
+                        <div class="mt-auto">
+                            <p class="teacher-name">Ms. Avila</p>
+                            <div class="progress-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="subject subject-img">
+                        <h3>Math</h3>
+                        <div class="subjectthing"></div>
+                        <p class="class-info">9-Jade 2025-2026</p>
+                        <div class="mt-auto">
+                            <p class="teacher-name">Mr. Ramos</p>
+                            <div class="progress-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="subject subject-img">
+                        <h3>Science</h3>
+                        <div class="subjectthing"></div>
+                        <p class="class-info">9-Jade 2025-2026</p>
+                        <div class="mt-auto">
+                            <p class="teacher-name">Ms. Talavera</p>
+                            <div class="progress-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="subject subject-img">
+                        <h3>Social Studies</h3>
+                        <div class="subjectthing"></div>
+                        <p class="class-info">9-Jade 2025-2026</p>
+                        <div class="mt-auto">
+                            <p class="teacher-name">Mr. Fernandez</p>
+                            <div class="progress-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="subject subject-img">
+                        <h3>Values Education</h3>
+                        <div class="subjectthing"></div>
+                        <p class="class-info">9-Jade 2025-2026</p>
+                        <div class="mt-auto">
+                            <p class="teacher-name">Mr. Buntile</p>
+                            <div class="progress-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-tag">
+        Student Name | Grade & Section ©2026
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
